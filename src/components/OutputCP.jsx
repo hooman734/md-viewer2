@@ -2,7 +2,9 @@ import { useSelector} from "react-redux";
 import marked from 'marked';
 
 const OutputCP = props => {
-    const text  = useSelector(state => state.inputText);
+    const text  = useSelector(state => {
+        return state.inputText
+    });
     console.log(text)
     const output = { __html: `${ marked(text || 'Empty...') }`};
 

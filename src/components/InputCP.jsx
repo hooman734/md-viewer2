@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Form } from 'react-bootstrap';
 
-import * as actions from '../redux/actions'
+import * as actions from '../redux/actions';
 
 const InputCP = () => {
     const dispatch = useDispatch();

@@ -1,9 +1,7 @@
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 
-const initialState = {
-    inputText: ''
-}
+const initialState = {};
 
 export default createStore(
     rootReducer,
