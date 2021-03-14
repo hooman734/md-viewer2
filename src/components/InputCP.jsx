@@ -1,12 +1,17 @@
+import { useDispatch } from 'react-redux';
 import { Form } from 'react-bootstrap';
 
-const InputCP = props => {
-    const { onInput } = props;
+import * as actions from '../redux/actions'
+
+const InputCP = () => {
+    const dispatch = useDispatch();
+    const onInput = event => dispatch(actions.inputTextUpdated(event.target.value));
+
     return (
         <Form>
         <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label><p className="badge badge-info">Input your markdown here:</p></Form.Label>
-            <Form.Control as="textarea" rows={20} onChange={onInput}/>
+            <Form.Control as="textarea" rows={ 30 } onChange={onInput}/>
         </Form.Group>
         </Form>
     );
